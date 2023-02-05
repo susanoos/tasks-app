@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./components/styles/App.css";
+import Todo from "./components/todos/Todo";
 
-function App() {
+const App = () => {
+  const todos = [
+    {
+      id: 1,
+      title: "Learn React",
+    },
+    {
+      id: 2,
+      title: "Learn Redux",
+    },
+    {
+      id: 3,
+      title: "Learn MongoDB",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Todo todoList={todos} />
     </div>
   );
-}
+};
 
 export default App;
