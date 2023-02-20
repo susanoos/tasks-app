@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import "./components/styles/App.css";
-import NewTodo from "./components/todos/NewTodo";
-import Todo from "./components/todos/Todo";
+import "./styles/App.css";
+import TaskList from "./components/tasks/TaskList";
+import Sidebar from "./components/sidebar/Sidebar";
 
-const dummy_todo = [
+const dummyTasks = [
   {
     id: 1,
     title: "Learn React",
   },
   {
     id: 2,
-    title: "Learn Redux",
+    title: "Learn Express",
   },
   {
     id: 3,
@@ -19,17 +19,13 @@ const dummy_todo = [
 ];
 
 const App = () => {
-  const [todos, setTodos] = useState(dummy_todo);
-
-  const todoHandler = (todo) => {
-    setTodos((prevTodo) => [todo, ...prevTodo]);
-  };
-
   return (
-    <div>
-      <NewTodo onAddTodo={todoHandler} />
-      <Todo todoList={todos} />
-    </div>
+    <>
+      <div>
+        <Sidebar />
+        <TaskList tasks={dummyTasks} />
+      </div>
+    </>
   );
 };
 
