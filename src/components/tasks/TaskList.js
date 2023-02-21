@@ -4,8 +4,10 @@ import classes from "../../styles/TaskList.module.css";
 const TaskList = ({ tasks }) => {
   const tasksList = tasks.map((task) => {
     return (
-      <ul key={task.id}>
-        <li className={classes.form__list}>{task.title}</li>
+      <ul className={classes.form__list} key={task.id}>
+        <li className={classes.tasks}>{task.title}</li>
+        <button>Edit</button>
+        <button>Delete</button>
       </ul>
     );
   });

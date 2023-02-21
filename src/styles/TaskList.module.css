@@ -1,10 +1,16 @@
 .form__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(1fr, auto);
+  grid-template-rows: repeat(1fr, auto);
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  text-align: left;
+  width: 600px;
+  height: 300px;
+  position: relative;
+  margin: auto;
 }
 
 .form__list {
+  font-size: 2rem;
   list-style: none;
 }
