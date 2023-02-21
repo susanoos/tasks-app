@@ -6,6 +6,14 @@
   padding-top: 2rem;
   position: relative;
 }
+
+.add_tasks__header__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .input__container {
   display: flex;
   gap: 0.4rem;

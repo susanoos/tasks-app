@@ -1,18 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "../../styles/AddTasks.module.css";
 
-const AddTasks = () => {
+const AddTasks = ({ hideAddTasks, tasksList, addNewTasks }) => {
+  const [newTask, setNewTask] = useState("");
+
+  const handleClick = () => {
+    hideAddTasks(false);
+  };
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setNewTask(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newTasksList = { id: Math.floor(Math.random() * 100), task: newTask };
+    addNewTasks(newTasksList);
+  };
+
   return (
-    <form className={classes.add__tasks__container}>
+    <form className={classes.add__tasks__container} onSubmit={handleSubmit}>
       <label>Add Tasks</label>
       <div className={classes.input__container}>
         <input
           type="text"
           placeholder="Add task"
           className={classes.add__tasks__input}
+          onChange={handleChange}
+          value={newTask}
         />
         <button type="submit" className={classes.btn__add__tasks}>
           Add
+        </button>
+        <button className={classes.btn__add__tasks} onClick={handleClick}>
+          Cancel
         </button>
       </div>
     </form>

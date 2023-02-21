@@ -16,3 +16,7 @@ body {
   margin: auto;
   /* width: 1500px; */
 }
+
+button {
+  cursor: pointer;
+}

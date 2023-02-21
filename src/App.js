@@ -7,26 +7,29 @@ import Tasks from "./components/tasks/Tasks";
 const dummyTasks = [
   {
     id: 1,
-    title: "Learn React",
+    task: "Learn React",
   },
   {
     id: 2,
-    title: "Learn Express",
+    task: "Learn Express",
   },
   {
     id: 3,
-    title: "Learn MongoDB",
+    task: "Learn MongoDB",
   },
 ];
 
 const App = () => {
   const [addTask, setAddTask] = useState(false);
-  console.log(addTask);
 
   return (
     <div>
       <Sidebar showAddTasks={setAddTask} />
-      <Tasks tasks={dummyTasks} showAddTasks={addTask} />
+      <Tasks
+        tasks={dummyTasks}
+        showAddTasks={addTask}
+        hideAddTasks={setAddTask}
+      />
     </div>
   );
 };

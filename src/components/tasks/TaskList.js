@@ -8,7 +8,7 @@ const TaskList = ({ tasks }) => {
         <Fragment key={task.id}>
           <div className={classes.form__list}>
             <li className={classes.tasks}>
-              {task.title}
+              {task.task}
               <div className={classes.btn__container}>
                 <button className={classes.btn__tasks}>Edit</button>
                 <button className={classes.btn__tasks}>Delete</button>
