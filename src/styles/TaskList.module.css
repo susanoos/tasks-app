@@ -13,4 +13,24 @@
 .form__list {
   font-size: 2rem;
   list-style: none;
+  border-bottom: 1px solid #eee;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.btn__container {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn__tasks {
+  border: none;
+  border-radius: 8px;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+  font-size: 1rem;
 }

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./styles/App.css";
-import TaskList from "./components/tasks/TaskList";
+
 import Sidebar from "./components/sidebar/Sidebar";
+import Tasks from "./components/tasks/Tasks";
 
 const dummyTasks = [
   {
@@ -19,13 +20,14 @@ const dummyTasks = [
 ];
 
 const App = () => {
+  const [addTask, setAddTask] = useState(false);
+  console.log(addTask);
+
   return (
-    <>
-      <div>
-        <Sidebar />
-        <TaskList tasks={dummyTasks} />
-      </div>
-    </>
+    <div>
+      <Sidebar showAddTasks={setAddTask} />
+      <Tasks tasks={dummyTasks} showAddTasks={addTask} />
+    </div>
   );
 };
 

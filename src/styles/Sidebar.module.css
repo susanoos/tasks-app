@@ -8,6 +8,27 @@
 }
 
 .sidebar__header {
-  font-size: 3rem;
+  color: #fff;
+  font-size: 6rem;
   margin-top: 1rem;
+}
+
+.sidebar__list {
+  list-style: none;
+}
+
+.sidebar__links__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.sidebar__links {
+  font-size: 3rem;
+  color: #fff;
+  list-style: none;
+  text-decoration: none;
 }
