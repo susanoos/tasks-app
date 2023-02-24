@@ -20,3 +20,10 @@ body {
 button {
   cursor: pointer;
 }
+
+.is__loading {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  padding-top: 20%;
+}

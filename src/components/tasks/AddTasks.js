@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "../../styles/AddTasks.module.css";
 
-const AddTasks = ({ hideAddTasks, tasksList, addNewTasks }) => {
+const AddTasks = ({ hideAddTasks, addNewTasks }) => {
   const [newTask, setNewTask] = useState("");
 
   const handleClick = () => {
@@ -15,8 +15,8 @@ const AddTasks = ({ hideAddTasks, tasksList, addNewTasks }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newTasksList = { id: Math.floor(Math.random() * 100), task: newTask };
-    addNewTasks(newTasksList);
+    const addedTask = { task: newTask };
+    addNewTasks(addedTask);
   };
 
   return (
